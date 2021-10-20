@@ -37,7 +37,7 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 |
 └── src/
     ├── __init__.py    <- Makes src a Python module
-    ├──hyper/
+    ├── hyper/
     │    ├──  __init__.py                   <- Makes hyper a Python module
     │    ├── grid.py                        <- Functionality to sample hyper-parameter values
     │    ├── evaluation.py                  <- Functionality to fit & cross-validate 
@@ -63,10 +63,10 @@ To install all dependencies, run:
 poetry install
 ```
 
-This project further uses a custom Python module ([src/hyper](src/hyper)), which can be installed with:
+This project further uses a custom Python module ([src/hyper](src/hyper)), which can be installed under poetry with:
 ```bash
 cd src/
-pip install -e .
+poetry run pip install -e .
 ```
 
 ## Reproducing our analysis
