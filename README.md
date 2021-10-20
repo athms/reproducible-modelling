@@ -3,7 +3,7 @@
 
 ## What are we doing?
 
-This example was created for the lecture series of Stanford's Center for Open and REproducible Science (CORES).
+This example was created for the [2021 fall lecture series](https://datascience.stanford.edu/news/center-open-and-reproducible-science-cores-fall-lecture-series) of [Stanford's Center for Open and REproducible Science (CORES)](https://datascience.stanford.edu/cores).
 
 The goal of this analysis is to study the effect of varying different hyper-parameters of the training of a simple classification model on its performance in sklearn's handwritten digit dataset. 
 
