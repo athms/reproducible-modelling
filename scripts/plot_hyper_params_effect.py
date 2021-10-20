@@ -16,7 +16,7 @@ Author: Armin W. Thomas; athms@stanford.edu
 import os
 import argparse
 import pandas as pd
-from src import hyper
+import hyper
 from seaborn import set_theme
 set_theme(style="white", rc={"axes.facecolor": (0, 0, 0, 0)})
 

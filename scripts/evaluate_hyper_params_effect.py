@@ -23,7 +23,7 @@ import os
 import argparse
 import numpy as np
 import sklearn
-from src import hyper
+import hyper
 
 
 def main():

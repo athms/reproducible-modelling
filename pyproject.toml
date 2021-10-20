@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "reproducible-modelling-dev"
+name = "reproducible-modelling"
 version = "0.1.0"
-description = "A simple example of a reproducible modelling project"
+description = "Exemplary reproducible modelling project"
 authors = ["Armin W. Thomas <athms@stanford.edu>"]
 license = "MIT"
 
@@ -12,7 +12,7 @@ pandas = "1.3.3"
 scikit-learn = "1.0"
 seaborn = "0.11.2"
 matplotlib = "3.4.3"
-setuptools = "^58.2.0"
+src = {path = "src"}
 
 [tool.poetry.dev-dependencies]
 

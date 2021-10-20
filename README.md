@@ -35,15 +35,14 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 |    ├── plot_hyper_params_effect.py        <- Summarizes results of evaluation in a figure
 |    └── run_analysis.sh                    <- Sequentially runs all analysis scripts
 |
-├── src/
-|    ├── __init__.py    <- Makes src a Python module
-|    └──hyper/
-|        ├──  __init__.py                   <- Makes hyper a Python module
-|        ├── grid.py                        <- Functionality to sample hyper-parameter values
-|        ├── evaluation.py                  <- Functionality to fit & cross-validate 
-|        └── plotting.py                    <- Functionality to create results figure
-|
-└── setup.py           <- makes project pip-installable (pip install -e .) so that 'src' can be imported
+└── src/
+    ├── __init__.py    <- Makes src a Python module
+    ├──hyper/
+    │    ├──  __init__.py                   <- Makes hyper a Python module
+    │    ├── grid.py                        <- Functionality to sample hyper-parameter values
+    │    ├── evaluation.py                  <- Functionality to fit & cross-validate 
+    │    └── plotting.py                    <- Functionality to create results figure
+    └── setup.py                            <- Makes 'hyper' pip-installable (pip install -e .)  
 ```
 
 ## Data description
@@ -66,6 +65,7 @@ poetry install
 
 This project further uses a custom Python module ([src/hyper](src/hyper)), which can be installed with:
 ```bash
+cd src/
 pip install -e .
 ```
 
