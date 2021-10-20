@@ -14,6 +14,7 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 
 ## Project organization
 
+```bash
 ├── LICENSE            <- MIT License
 ├── Makefile           <- Makefile with targets to 'load', 'evaluate', and 'plot' ('make all' runs all three analysis steps)
 ├── poetry.lock        <- Details of used package versions
@@ -43,6 +44,7 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 |        └── plotting.py                    <- Functionality to create results figure
 |
 └── setup.py           <- makes project pip-installable (pip install -e .) so that 'src' can be imported
+```
 
 
 ## Installation
