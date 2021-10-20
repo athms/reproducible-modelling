@@ -21,7 +21,7 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 ├── poetry.toml        <- Lists all dependencies
 ├── README.md          <- This README file.
 ├── data/
-|    └──               <- A copy of sklearn's handwritten digit dataset
+|    └──               <- A copy of the handwritten digit dataset provided by sklearn
 |
 ├── results/
 |    ├── estimates/
