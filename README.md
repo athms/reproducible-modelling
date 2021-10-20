@@ -1,4 +1,4 @@
-# An examplary reproducible computational modelling project
+# An examplary reproducible modelling project
 
 
 ## What are we doing?
@@ -18,7 +18,7 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 ├── LICENSE            <- MIT License
 ├── Makefile           <- Makefile with targets to 'load', 'evaluate', and 'plot' ('make all' runs all three analysis steps)
 ├── poetry.lock        <- Details of used package versions
-├── poetry.toml        <- Lists all dependencies
+├── pyproject.toml     <- Lists all dependencies
 ├── README.md          <- This README file.
 ├── data/
 |    └──               <- A copy of the handwritten digit dataset provided by sklearn
@@ -26,7 +26,7 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 ├── results/
 |    ├── estimates/
 |    │    └──          <- Generated estimates of classifier performance
-|    ├── figures/
+|    └── figures/
 |         └──          <- Generated figures
 |
 ├── scrips/
@@ -72,9 +72,9 @@ cd scripts
 poetry run bash run_analysis.sh
 ```
 
-Or by the use of `make`:
+or by the use of `make`:
 ```bash
-make <ANALYSIS TARGET>
+poetry run make <ANALYSIS TARGET>
 ```
 
 Our Makefile provides the following analysis targets:
@@ -85,6 +85,7 @@ Our Makefile provides the following analysis targets:
 | load | Downloads sklearn's handwritten digit dataset |
 | evaluate | Runs our cross-validated hyper-parameter evaluation |
 | plot | Summarizes results of evaluation in a figure |
+
 
 
 *This README file is strongly inspired by the [Cookiecutter Data Science Structure](https://drivendata.github.io/cookiecutter-data-science/)*
