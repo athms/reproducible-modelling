@@ -5,11 +5,11 @@
 
 This example was created for the [2021 fall lecture series](https://datascience.stanford.edu/news/center-open-and-reproducible-science-cores-fall-lecture-series) of [Stanford's Center for Open and REproducible Science (CORES)](https://datascience.stanford.edu/cores).
 
-The goal of this analysis is to study the effect of varying different hyper-parameters of the training of a simple classification model on its performance in scikit-learn's handwritten digit dataset. 
+The goal of this analysis is to study the effect of varying different hyper-parameters of the training of a simple classification model on its performance in [scikit-learn's handwritten digit dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#digits-dataset). 
 
-Specifically, we will study the effect of varying the learning rate, regularisation strength, number of gradient descent iterations, and random shuffling of the data on the cross-validated performance of [scikit-learn's default linear one-vs-rest SVM classifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html).
+Specifically, we will study the effect of individually varying the learning rate, regularisation strength, number of gradient descent iterations, and random shuffling of the data on the 3-fold cross-validation performance of [scikit-learn's default linear one-vs-rest SVM classifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html).
 
-Each hyper-parameter is varied individually, while all other hyper-parameters are set to default values (see [scripts/evaluate_hyper_params_effect.py](scripts/evaluate_hyper_params_effect.py))
+Importantly, we vary each hyper-parameter separately while all other hyper-parameters are set to default values (see [scripts/evaluate_hyper_params_effect.py](scripts/evaluate_hyper_params_effect.py)).
 
 
 ## Project organization
@@ -31,9 +31,9 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 |
 ├── scrips/
 |    ├── load_data.py                       <- Downloads the dataset to specified 'data-path'
-|    ├── evaluate_hyper_params_effect.py    <- Runs hyper-parameter evaluation
+|    ├── evaluate_hyper_params_effect.py    <- Runs cross-validated hyper-parameter evaluation
 |    ├── plot_hyper_params_effect.py        <- Summarizes results of evaluation in a figure
-|    └── run_analysis.sh                    <- Sequentially runs all analysis scripts
+|    └── run_analysis.sh                    <- Runs all analysis steps
 |
 └── src/
     ├── hyper/
@@ -48,21 +48,21 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 
 We use the handwritten digits dataset provided by [scikit-learn](https://scikit-learn.org/stable/). For details on this dataset, see scikit-learn's documentation:
 
-https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html
+https://scikit-learn.org/stable/datasets/toy_dataset.html#digits-dataset
 
 
 ## Installation
 
-This project is written for Python 3.9.5 (we generally recommend [pyenv](https://github.com/pyenv/pyenv) for Python version management). 
+This project is written for Python 3.9.5 (we recommend [pyenv](https://github.com/pyenv/pyenv) for Python version management). 
 
-This project manages dependencies with [Python Poetry](https://python-poetry.org/) and provides details of the used package versions  in [pyproject.toml](pyproject.toml).
+All software dependencies of this project are managed with [Python Poetry](https://python-poetry.org/). All details about the used package versions are provided in  [pyproject.toml](pyproject.toml).
 
-To install all dependencies, run:
+To install the dependencies with `poetry`, run:
 ```bash
 poetry install
 ```
 
-This project further uses a custom Python module ([src/hyper](src/hyper)), which can be installed under poetry with:
+To reproduce our analyses, you additionally need to install a custom Python module in your `poetry` environemnt, which we created for this project (see [src/hyper](src/hyper)):
 ```bash
 cd src/
 poetry run pip install -e .
@@ -77,19 +77,19 @@ cd scripts
 poetry run bash run_analysis.sh
 ```
 
-or by the use of `make`:
+..or by the use of `make`:
 ```bash
 poetry run make <ANALYSIS TARGET>
 ```
 
-Our Makefile provides the following analysis targets:
+We provide the following targets for `make`:
 
 | Analysis target | Description |
 | --- | ----------- |
 | all | Runs the entire analysis pipeline |
 | load | Downloads scikit-learn's handwritten digit dataset |
 | evaluate | Runs our cross-validated hyper-parameter evaluation |
-| plot | Summarizes results of evaluation in a figure |
+| plot | Creates our results figure |
 
 
 
