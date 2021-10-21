@@ -62,7 +62,7 @@ To install the dependencies with `poetry`, run:
 poetry install
 ```
 
-To reproduce our analyses, you additionally need to install a custom Python module in your `poetry` environemnt, which we created for this project (see [src/hyper](src/hyper)):
+To reproduce our analyses, you additionally need to install a custom Python module (`hyper`) in your `poetry` environment, which we created for this project (see [src/hyper](src/hyper)):
 ```bash
 cd src/
 poetry run pip install -e .
