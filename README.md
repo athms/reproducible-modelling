@@ -37,7 +37,7 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 |
 └── src/
     ├── hyper/
-    │    ├──  __init__.py                   <- Makes hyper a Python module
+    │    ├──  __init__.py                   <- Makes 'hyper' a Python module
     │    ├── grid.py                        <- Functionality to sample hyper-parameter values
     │    ├── evaluation.py                  <- Functionality to fit & cross-validate 
     │    └── plotting.py                    <- Functionality to create results figure
