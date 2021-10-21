@@ -20,7 +20,8 @@ Importantly, we vary each hyper-parameter separately while all other hyper-param
 ├── poetry.lock        <- Details of used package versions
 ├── pyproject.toml     <- Lists all dependencies
 ├── README.md          <- This README file.
-├── docs/              <- Slides of the practical tutorial
+├── docs/              
+|    └──               <- Slides of the practical tutorial
 ├── data/
 |    └──               <- A copy of the handwritten digit dataset provided by scikit-learn
 |
