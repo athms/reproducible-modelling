@@ -38,9 +38,9 @@ Importantly, we vary each hyper-parameter separately while all other hyper-param
 └── src/
     ├── hyper/
     │    ├──  __init__.py                   <- Makes 'hyper' a Python module
-    │    ├── grid.py                        <- Sample hyper-parameter grid
-    │    ├── evaluation.py                  <- Evaluate classifier performance, given hyper-parameters
-    │    └── plotting.py                    <- Visualize results
+    │    ├── grid.py                        <- Functionality to sample hyper-parameter grid
+    │    ├── evaluation.py                  <- Functionality to evaluate classifier performance, given hyper-parameters
+    │    └── plotting.py                    <- Functionality to visualize results
     └── setup.py                            <- Makes 'hyper' pip-installable (pip install -e .)  
 ```
 
