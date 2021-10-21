@@ -25,7 +25,7 @@ def sample_hyper_params(
                           'steps': (1, 100) }.
 
     Returns:
-        dict: Individual parameter value grids.
+        dict: Hyper-parameter values.
     """
     return {
         "alpha": np.linspace(*param_bounds["alpha"], num=n),
