@@ -36,7 +36,6 @@ Each hyper-parameter is varied individually, while all other hyper-parameters ar
 |    └── run_analysis.sh                    <- Sequentially runs all analysis scripts
 |
 └── src/
-    ├── __init__.py    <- Makes src a Python module
     ├── hyper/
     │    ├──  __init__.py                   <- Makes hyper a Python module
     │    ├── grid.py                        <- Functionality to sample hyper-parameter values
