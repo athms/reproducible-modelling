@@ -9,11 +9,11 @@ Each factor is varied separately while all other factors are held
 constant during training. Performance evaluation is performed by the 
 use of 3-fold cross-validation.
 
-This analysis requires that sklearn's handwritten digit dataset is stored
+This script requires that sklearn's handwritten digit dataset is stored
 in 'data-path'. This can be achieved by first running 'load_data.py'
 or 'make load'.
 
-The analysis outputs a dataframe to 'results-path', which contains the 
+The script outputs a dataframe to 'results-path', which contains the 
 classifier's predictive performance in each cross-validation fold.
 
 Author: Armin W. Thomas; athms@stanford.edu
