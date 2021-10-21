@@ -57,12 +57,18 @@ This project is written for Python 3.9.5 (we recommend [pyenv](https://github.co
 
 All software dependencies of this project are managed with [Python Poetry](https://python-poetry.org/). All details about the used package versions are provided in  [pyproject.toml](pyproject.toml).
 
-To install the dependencies with `poetry`, run:
+To clone this repository to your local machine, run:
 ```bash
+git clone https://github.com/athms/reproducible-modelling
+```
+
+To install all dependencies with `poetry`, run:
+```bash
+cd reproducible-modelling/
 poetry install
 ```
 
-To reproduce our analyses, you additionally need to install a custom Python module (`hyper`) in your `poetry` environment, which we created for this project (see [src/hyper](src/hyper)):
+To reproduce our analyses, you additionally need to install our custom Python module ([src/hyper](src/hyper)) in your `poetry` environment:
 ```bash
 cd src/
 poetry run pip install -e .
