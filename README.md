@@ -1,4 +1,4 @@
-# An exemplary reproducible modelling project
+# An example of a reproducible modelling project
 
 
 ## What are we doing?
