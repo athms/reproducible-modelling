@@ -2,7 +2,7 @@
 
 """
 This script downloads the handwritten digits dataset
-of sklearn to the specified 'data-path'.
+provided by sklearn to the specified 'data-path'.
 
 Author: Armin W. Thomas; athms@stanford.edu
 """
@@ -25,11 +25,11 @@ def main():
         help="path where data file is stored (default: ../data/)")
     args = ap.parse_args()
 
-    # 1. define local path to dataset
+    # 1. define local target path for dataset
     filepath = '{}hand_written_digits_data.npy'.format(args.data_path)
 
     # 2. download and store handwritten digits data
-    # to local filepath, if it does not exist yet
+    # to 'filepath', if it does not exist yet
     if not os.path.isfile(filepath):
         os.makedirs('../data/', exist_ok=True)
         data = load_digits()

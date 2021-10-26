@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 """
-This script summarizes the results of running 
-'evaluate_hyper_params_effect.py' in a figure.
+This creates a summary figure for the results of running 
+'evaluate_hyper_params_effect.py'.
 
-The script requires that the 'evaluate_hyper_params_effect.py' 
-script has been run and that its results are stored in 'results-path'.
+The script requires that 'evaluate_hyper_params_effect.py' 
+has been run and that its results are stored in 'results-path'.
 This can also be achieved by running 'make evaluate'.
 
 The resulting figure is saved to 'results-path'.
@@ -39,7 +39,7 @@ def main():
         "{}estimates/hyper_params_performance.csv".format(args.results_path)
     )
 
-    # 2. create the figure with 'hyper.plot_hyper_params_performance'
+    # 2. create results figure with 'hyper.plot_hyper_params_performance'
     #  and save it to 'results-path' 
     g = hyper.plot_hyper_params_performance(results)
     os.makedirs('{}figures/'.format(args.results_path), exist_ok=True)

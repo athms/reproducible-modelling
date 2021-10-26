@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 """
-This script evaluates the effect of varying different factors of the 
-training of a classification model on its predictive performance in
+This analysis evaluates the effect of varying different factors of the 
+training of a linear support vector machine on its predictive performance in
 sklearn's handwritten digit dataset. 
 
-Each factor is varied separately while all other factors are held 
-constant during training. Performance evaluation is performed by the 
-use of 3-fold cross-validation.
+Importantly, each factor is varied separately while all other factors 
+are held constant during training. Performance evaluation is performed 
+by the use of 3-fold cross-validation.
 
 This script requires that sklearn's handwritten digit dataset is stored
 in 'data-path'. This can be achieved by first running 'load_data.py'
@@ -64,14 +64,14 @@ def main():
     # (we choose sklearn's SGDClassifier)
     classifier = sklearn.linear_model.SGDClassifier
 
-    # 3. sample a set of hyper-parameters 
+    # 3. sample a set of hyper-parameters values
     # with 'hyper'
     hyper_params = hyper.sample_hyper_params(
         n=args.n
     )
 
     # 4. evaluate classifier performance for 
-    # the specified hyper-parameter values
+    # the specified set of hyper-parameter values
     # with 'hyper'
     results = hyper.evaluate_hyper_params_effects(
         X=data["data"],

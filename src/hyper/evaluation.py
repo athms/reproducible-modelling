@@ -15,7 +15,7 @@ def _create_train_test_idx(
     """Create training and test indeces for a dataset 
     with 'n' samples.
 
-    The indeces indicate which of the  'n' data samples 
+    The indeces indicate which of the 'n' data samples 
     should be dedicated as trainig and test data.
 
     Args:
