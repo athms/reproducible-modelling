@@ -5,11 +5,13 @@
 
 This example was created for the [2021 fall lecture series](https://datascience.stanford.edu/news/center-open-and-reproducible-science-cores-fall-lecture-series) of [Stanford's Center for Open and REproducible Science (CORES)](https://datascience.stanford.edu/cores).
 
-The goal of this analysis is to study the effect of varying different hyper-parameters of the training of a simple classification model on its performance in [scikit-learn's handwritten digit dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#digits-dataset). 
+A video of the talk can be found at: https://youtu.be/JAQot6b1Cng
 
-Specifically, we will study the effect of individually varying the learning rate, regularisation strength, number of gradient descent iterations, and random shuffling of the data on the 3-fold cross-validation performance of [scikit-learn's default linear one-vs-rest SVM classifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html).
+The goal of this exemplary analysis is to explore the effect of varying different hyper-parameters of the training of a simple classification model on its performance in [scikit-learn's handwritten digit dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#digits-dataset). 
 
-Importantly, we vary each hyper-parameter separately while all other hyper-parameters are set to default values (see [scripts/evaluate_hyper_params_effect.py](scripts/evaluate_hyper_params_effect.py)).
+Specifically, we will study the effect of varying the learning rate, regularisation strength, number of gradient descent steps, and random shuffling of the data on the 3-fold cross-validation performance of [scikit-learn's linear support vector machine classifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html).
+
+Importantly, each hyper-parameter is varied separately while all other hyper-parameters are set to default values (for details, see [scripts/evaluate_hyper_params_effect.py](scripts/evaluate_hyper_params_effect.py)).
 
 
 ## Project organization
